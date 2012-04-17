@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, EdacioCallerActivity!</string>
+    <string name="app_name">Edacio Caller</string>
+    <string name="addtitle">Import to Edacio Radio</string>
+    <string name="callbutton">Call</string>
+    <string name="rejectbutton">Next</string>
+    <string name="addgroups">Stations</string>
+    <string name="stationtext">Stations</string>
+    <string name="add">Add</string>
+    <string name="createstation">Create New Station</string>
+
+</resources>

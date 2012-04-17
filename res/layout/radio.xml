@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/loadpage"
+    android:orientation="vertical" >
+	 <RelativeLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" >
+    
+    
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Calvin Park"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical = "true"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+	<ImageView
+        android:id="@+id/contactPicturesView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="68dp"
+        android:layout_above="@id/name"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_launcher" />
+	
+    <TextView
+        android:id="@+id/phonenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:text="8083337006"
+        android:layout_below = "@id/name"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <Button
+            android:id="@+id/contactStationView"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:background="@drawable/stationcorner"
+            android:layout_below = "@id/phonenumber"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginTop="3dp"
+            android:textColor="#000"
+            android:shadowColor="#000"
+            android:shadowDx="0.5"
+            android:shadowDy="0.5"
+            android:shadowRadius="1"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+	</RelativeLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" >
+
+        <Button
+            android:id="@+id/call"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttoncorner"
+            android:shadowColor="#000"
+            android:shadowDx="0.5"
+            android:shadowDy="0.5"
+            android:shadowRadius="1"
+            android:text="@string/callbutton" />
+
+        <Button
+            android:id="@+id/reject"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/rejectcorner"
+            android:shadowColor="#000"
+            android:shadowDx="0.5"
+            android:shadowDy="0.5"
+            android:shadowRadius="1"
+            android:text="@string/rejectbutton" />
+    </LinearLayout>
+
+    <SlidingDrawer
+	    android:id="@+id/slidingDrawer1"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:content="@+id/content"
+	    android:handle="@+id/handle"
+	    android:layout_marginTop="30dp"
+	    android:bottomOffset="0dp">
+	    
+        <Button
+            android:id="@+id/handle"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:background="@drawable/handlecorner"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textColor="#999"
+            android:text="@string/addgroups" />
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#dd000000">
+
+            <TextView
+                android:id="@+id/stationName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="5dp"
+                android:text="@string/stationtext"
+                android:shadowColor="#fff"
+	            android:shadowDx="0.8"
+	            android:shadowDy="0.8"
+	            android:shadowRadius="1"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+			<LinearLayout
+            android:id="@+id/content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10">
+	            <EditText
+	                android:id="@+id/addStationEdit"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="7.5">
+	                <requestFocus />
+	            </EditText>
+	             <Button
+		            android:id="@+id/addStations"
+		            android:layout_width="0dp"
+		            android:layout_height="wrap_content"
+		            android:text="@string/add"
+		            android:layout_weight="2.5"/>
+			</LinearLayout>
+            <ListView
+                android:id="@+id/stationListView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+            </ListView>
+
+        </LinearLayout>
+    </SlidingDrawer>
+
+</RelativeLayout>
